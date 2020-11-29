@@ -6,25 +6,21 @@ import {
 } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
-class Navigation extends React.Component {
+class Nav_news extends React.Component {
     render() {
         return (
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand>KNIGHTFURY</Navbar.Brand>
+                <Navbar.Brand>NEWS API</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link>
-                            <Link to= '/home'>Home</Link>
-                        </Nav.Link>
-                        <Nav.Link>
-                            <Link to= '/slide'>Carousel</Link>
-                        </Nav.Link>
-                        <NavDropdown title="App" id="basic-nav-dropdown">
+                        <NavDropdown title="Country" id="basic-nav-dropdown">
                             <NavDropdown.Item>
-                                <Link to= '/to_do_list'>To Do List App</Link>
+                                <Link to= '/newsid'>Indonesia</Link>
                             </NavDropdown.Item>
-                            <NavDropdown.Divider />
+                            <NavDropdown.Item>
+                                <Link to= '/newsid'>Indonesia</Link>
+                            </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
@@ -32,4 +28,4 @@ class Navigation extends React.Component {
         )
     }
 }
-export default Navigation
+export default Nav_news

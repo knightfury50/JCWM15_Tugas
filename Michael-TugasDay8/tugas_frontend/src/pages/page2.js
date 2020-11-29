@@ -6,8 +6,8 @@ class Page2 extends  React.Component {
         return (
             <div>
                 <center>
-                <h1>PAGE 2</h1>
-                <Link to='/home'><button>Go to home page</button></Link>
+                <h1 id="page2">PAGE 2</h1>
+                <Link to='/'><button>Go to home page</button></Link>
                 </center>
             </div>
         )
