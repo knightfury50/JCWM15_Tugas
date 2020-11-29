@@ -30,7 +30,7 @@ class News extends React.Component {
         ],
       }
     }
-    fetchDataNews = (categoryId, country) => {
+    data = (categoryId, country) => {
       let URL = `http://newsapi.org/v2/top-headlines?apiKey=92c554eea6424124afaf206308465695&category=${categoryId}&country=${country}`;
       Axios.get(URL)
         .then((res) =>
@@ -42,25 +42,25 @@ class News extends React.Component {
           )
         )
         .catch((e) => console.log(e.message))
-        this.layoutBerita()
+        this.newsList()
     }
-    handleChangeCategory = (categoryId) => {
+    changeCategory = (categoryId) => {
       this.setState({
         ...this.props,
         category: categoryId,
       }
       )
-      this.fetchDataNews(categoryId, this.state.country)
+      this.data(categoryId, this.state.country)
     }
-    handleChangeCountry = (countryId) => {
+    changeCountry = (countryId) => {
       this.setState({
         ...this.props,
         country: countryId,
       }
       )
-      this.fetchDataNews(this.state.category, countryId)
+      this.data(this.state.category, countryId)
     }
-    layoutBerita = () => {
+    newsList = () => {
       return this.state.news.map((item, index) => {
         return (
           <Col md={3} key={index}>
@@ -81,22 +81,10 @@ class News extends React.Component {
       }
       )
     }
-    listCategoryMenu = () => {
-        return this.state.showCategory.map((category) => (
-          <Dropdown.Item
-              onClick={() => this.handleChangeCategory(category)}
-              key={category}
-              href="#/news">
-              {category}
-          </Dropdown.Item>
-          )
-          )
-    }
-  
-    listCountryMenu = () => {
+    countryList = () => {
         return this.state.showCountry.map((country) => (
           <Dropdown.Item
-              onClick={() => this.handleChangeCountry(country)}
+              onClick={() => this.changeCountry(country)}
               key={country}
               href="#/news">
               {country}
@@ -104,37 +92,48 @@ class News extends React.Component {
           )
           )
     }
+    categoryList = () => {
+        return this.state.showCategory.map((category) => (
+          <Dropdown.Item
+              onClick={() => this.changeCategory(category)}
+              key={category}
+              href="#/news">
+              {category}
+          </Dropdown.Item>
+          )
+          )
+    }
     componentDidMount() {
-      this.fetchDataNews(this.state.category, this.state.country)
+      this.data(this.state.category, this.state.country)
     }
     render() {
       return (
-        <div>
+        <div style={{backgroundColor:'black'}}>
           <Container fluid>
               <div style={{display:'flex', justifyContent:'space-between'}}>
-                  <div style={{display:'flex'}}>
+                  <div style={{display:'flex', marginTop:'10px'}}>
                     <Dropdown  style={{marginRight:'20px'}}>
-                        <Dropdown.Toggle variant="dark" id="dropdown-basic" style={{width: '160px'}}>
+                        <Dropdown.Toggle variant="light" id="dropdown-basic" style={{width: '160px'}}>
                             Country
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            {this.listCountryMenu()}
+                            {this.countryList()}
                         </Dropdown.Menu>
                     </Dropdown>
                     <Dropdown>
-                        <Dropdown.Toggle variant="dark" id="dropdown-basic" style={{width: '160px'}}>
+                        <Dropdown.Toggle variant="light" id="dropdown-basic" style={{width: '160px'}}>
                             Category
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            {this.listCategoryMenu()}
+                            {this.categoryList()}
                         </Dropdown.Menu>
                     </Dropdown>
                   </div>
                   <div>
-                    <p style={{fontSize: "35px"}}>{this.state.country} | {this.state.category}</p>
+                    <p style={{fontSize: "30px", color:'white'}}>{this.state.country} | {this.state.category}</p>
                   </div>
               </div>
-            <Row>{this.layoutBerita()}</Row>
+            <Row>{this.newsList()}</Row>
           </Container>
         </div>
       )
