@@ -25,7 +25,7 @@ class Navigation extends React.Component {
                                 <Link to= '/to_do_list'>To Do List App</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                <Link to= '/newsid'>News App</Link>
+                                <Link to= '/news'>News App</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>
