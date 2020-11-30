@@ -9,23 +9,23 @@ import {Link} from 'react-router-dom'
 class Navigation extends React.Component {
     render() {
         return (
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="dark" variant="dark" expand="lg">
                 <Navbar.Brand>KNIGHTFURY |</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link>
-                            <Link to= '/'>Home</Link>
+                            <Link to= '/' style={{color:'white', textDecoration:'none'}}>Home</Link>
                         </Nav.Link>
                         <Nav.Link>
-                            <Link to= '/slide'>Carousel</Link>
+                            <Link to= '/slide' style={{color:'white', textDecoration:'none'}}>Carousel</Link>
                         </Nav.Link>
                         <NavDropdown title="App" id="basic-nav-dropdown">
                             <NavDropdown.Item>
-                                <Link to= '/to_do_list'>To Do List App</Link>
+                                <Link to= '/to_do_list' style={{color:'#3c6382', textDecoration:'none'}}>To Do List App</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                <Link to= '/news'>News App</Link>
+                                <Link to= '/news' style={{color:'#3c6382', textDecoration:'none'}}>News App</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>

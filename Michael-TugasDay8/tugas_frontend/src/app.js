@@ -15,10 +15,9 @@ import './to_do_list_style.css'
 
 
 class App extends React.Component {
-
   render() {
     return (
-      <div >
+      <div>
         <Navigation/>
         <Switch>
           <Route path='/' component={Home} exact/>

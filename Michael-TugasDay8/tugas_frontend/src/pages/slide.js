@@ -10,11 +10,21 @@ class Slide extends React.Component {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://wallpapercave.com/wp/wp3440776.jpg"
+                        src="https://tx-free-imgs.acfun.cn/Fnp8aU9KLYorvsrZEyAjzSqnJtrR?imageslim"
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h5>First slide</h5>
+                        <h1>First slide</h1>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src="https://i.pinimg.com/originals/63/c6/26/63c626d973f83cca57ec2fc2129cdc6d.jpg"
+                        alt="Second slide"
+                    />
+                    <Carousel.Caption>
+                        <h1>Second slide</h1>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -24,17 +34,7 @@ class Slide extends React.Component {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h5>Second slide</h5>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="https://i.pinimg.com/originals/63/c6/26/63c626d973f83cca57ec2fc2129cdc6d.jpg"
-                        alt="Third slide"
-                    />
-                    <Carousel.Caption>
-                        <h5>Third slide</h5>
+                        <h1>Third slide</h1>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
