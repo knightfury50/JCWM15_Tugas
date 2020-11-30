@@ -7,6 +7,12 @@
       "email": "shodaime01@gmail.com"
     },
     {
+      "id": 2,
+      "first_name": "Tobirama",
+      "last_name": "Senju",
+      "email": "nidaime02@gmail.com"
+    },
+    {
       "id": 3,
       "first_name": "Hiruzen",
       "last_name": "Sarutobi",
@@ -19,15 +25,15 @@
       "email": "yondaime04@gmail.com"
     },
     {
-      "first_name": "as",
-      "last_name": "dad",
-      "email": "afdf",
+      "first_name": "michael ",
+      "last_name": "siahaan",
+      "email": "msiahaan22@ymail.com",
       "id": 5
     },
     {
-      "first_name": "as",
-      "last_name": "dad",
-      "email": "afdf",
+      "first_name": "alfa",
+      "last_name": "liesto",
+      "email": "alfa_liesto@rocketmail.com",
       "id": 6
     }
   ]

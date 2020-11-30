@@ -20,8 +20,8 @@ class Data_table extends React.Component {
     tablehead = () => {
         return(
             <thead>
-                <tr>
-                    <th>#</th>
+                <tr style={{color:'white', backgroundColor:'#596275'}}>
+                    <th>No</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
@@ -36,14 +36,14 @@ class Data_table extends React.Component {
             <tbody>
                 {dbUsers.map((item,index) => {
                     return (
-                        <tr key={index}>
+                        <tr key={index} style={{color:'white', backgroundColor:'gray'}}>
                             <td>{index+1}</td>
                             <td>{item.first_name}</td>
                             <td>{item.last_name}</td>
                             <td>{item.email}</td>
                             <td>
                                 <button>Edit</button>
-                                <button onClick={this.buttondelete}>Delete</button>
+                                <button onClick={() => this.handledel(index)}>Delete</button>
                             </td>
                         </tr>
                     )
@@ -55,7 +55,7 @@ class Data_table extends React.Component {
     tableinput = () => {
         return (
             <tbody>
-                <tr>
+                <tr style={{color:'white', backgroundColor:'#b2bec3'}}>
                     <td>#</td>
                     <td>
                         <Form.Control type="text" placeholder="enter first name" ref="firstname"/>
@@ -92,7 +92,6 @@ class Data_table extends React.Component {
             email
           })
           .then((res) => {
-              console.log(res.data)
               Axios.get('http://localhost:2000/users')
               .then((res) => {
                   console.log(res.data)
@@ -103,13 +102,13 @@ class Data_table extends React.Component {
           .catch(err => console.log(err)
           )
     }
-    buttondelete = () => {
-        Axios.delete('http://localhost:2000/users/2')
+    handledel = (index) => {
+        Axios.delete(`http://localhost:2000/users/${index}`)
         .then(res => console.log(res.data)
         )
         .catch(err => console.log(err)
         )
-      }
+    }
     render() {
         console.log(this.state.dbUsers)
         return (

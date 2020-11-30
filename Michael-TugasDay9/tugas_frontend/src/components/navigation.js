@@ -17,18 +17,18 @@ class Navigation extends React.Component {
                         <Nav.Link as={Link} to='/' style={{color:'white', textDecoration:'none'}}>
                             Home
                         </Nav.Link>
-                        <Nav.Link as={Link} to='/slide' style={{color:'white', textDecoration:'none'}}>
+                        <Nav.Link as={Link} to='/carousel' style={{color:'white', textDecoration:'none'}}>
                             Carousel
                         </Nav.Link>
                         <NavDropdown title="App" id="basic-nav-dropdown">
                             <NavDropdown.Item>
-                                <Link to= '/to_do_list' style={{color:'#3c6382', textDecoration:'none'}}>To Do List App</Link>
+                                <Link to= '/to_do_list' style={{color:'#596275', textDecoration:'none'}}>To Do List App</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                <Link to= '/news' style={{color:'#3c6382', textDecoration:'none'}}>News App</Link>
+                                <Link to= '/news' style={{color:'#596275', textDecoration:'none'}}>News App</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item>
-                                <Link to= '/data_table' style={{color:'#3c6382', textDecoration:'none'}}>Data Table App</Link>
+                                <Link to= '/data_table' style={{color:'#596275', textDecoration:'none'}}>Data Table App</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>

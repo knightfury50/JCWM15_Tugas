@@ -8,7 +8,7 @@ class Home extends  React.Component {
             <div>
                 <center>
                 <h1 id="home" style={{color:'white', marginTop:'20px', marginBottom:'15px'}}>HOME PAGE</h1>
-                <Link to='/page2'><Button variant="secondary">Go to page 2</Button></Link>
+                <Link to='/page2'><Button variant="secondary" style={{backgroundColor:'#3c6382'}}>Go page 2</Button></Link>
                 </center>
             </div>
         )

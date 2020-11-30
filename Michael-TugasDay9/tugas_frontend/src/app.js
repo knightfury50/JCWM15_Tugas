@@ -5,7 +5,7 @@ import Navigation from './components/navigation'
 
 import Home from './pages/home'
 import Page2 from './pages/page2'
-import Slide from './pages/slide'
+import Slide from './pages/carousel'
 import To_do_list from './pages/to_do_list'
 import News from './pages/news'
 import NotFound from './pages/notfound'
@@ -22,7 +22,7 @@ class App extends React.Component {
         <Navigation/>
         <Switch>
           <Route path='/' component={Home} exact/>
-          <Route path='/slide' component={Slide}/>
+          <Route path='/carousel' component={Slide}/>
           <Route path='/page2' component={Page2}/>
           <Route path='/to_do_list' component={To_do_list}/>
           <Route path='/news' component={News}/>

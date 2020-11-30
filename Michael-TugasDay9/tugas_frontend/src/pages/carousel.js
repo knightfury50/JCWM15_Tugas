@@ -1,7 +1,5 @@
 import React from 'react'
-import {
-   Carousel
-} from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap'
 
 class Slide extends React.Component {
     render() {
@@ -13,29 +11,20 @@ class Slide extends React.Component {
                         src="https://tx-free-imgs.acfun.cn/Fnp8aU9KLYorvsrZEyAjzSqnJtrR?imageslim"
                         alt="First slide"
                     />
-                    <Carousel.Caption>
-                        <h1>First slide</h1>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://cdn.statically.io/img/static.zerochan.net/Jump.Force.full.2394428.jpg"
+                        src="https://images5.alphacoders.com/854/thumb-1920-854773.png"
                         alt="Second slide"
                     />
-                    <Carousel.Caption>
-                        <h1>Second slide</h1>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images6.alphacoders.com/636/thumb-1920-636022.jpg"
+                        src="https://i.pinimg.com/originals/43/0e/23/430e23ad72d0a87c3d49e19cbd97f76d.png"
                         alt="Third slide"
                     />
-                    <Carousel.Caption>
-                        <h1>Third slide</h1>
-                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
         )
