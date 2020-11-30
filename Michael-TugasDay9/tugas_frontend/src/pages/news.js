@@ -27,11 +27,11 @@ class News extends React.Component {
         ],
         showCountry: [
             "au","cn","eg","fr","de","gr","hk","id","in","it","jp","my","nl","ph","ru","sg","gb","us"
-        ],
+        ]
       }
     }
     data = (categoryId, country) => {
-      let URL = `http://newsapi.org/v2/top-headlines?apiKey=92c554eea6424124afaf206308465695&category=${categoryId}&country=${country}`;
+      let URL = `http://newsapi.org/v2/top-headlines?apiKey=92c554eea6424124afaf206308465695&category=${categoryId}&country=${country}`
       Axios.get(URL)
         .then((res) =>
           this.setState({

@@ -14,11 +14,11 @@ class Navigation extends React.Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link>
-                            <Link to= '/' style={{color:'white', textDecoration:'none'}}>Home</Link>
+                        <Nav.Link as={Link} to='/' style={{color:'white', textDecoration:'none'}}>
+                            Home
                         </Nav.Link>
-                        <Nav.Link>
-                            <Link to= '/slide' style={{color:'white', textDecoration:'none'}}>Carousel</Link>
+                        <Nav.Link as={Link} to='/slide' style={{color:'white', textDecoration:'none'}}>
+                            Carousel
                         </Nav.Link>
                         <NavDropdown title="App" id="basic-nav-dropdown">
                             <NavDropdown.Item>
@@ -26,6 +26,9 @@ class Navigation extends React.Component {
                             </NavDropdown.Item>
                             <NavDropdown.Item>
                                 <Link to= '/news' style={{color:'#3c6382', textDecoration:'none'}}>News App</Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                <Link to= '/data_table' style={{color:'#3c6382', textDecoration:'none'}}>Data Table App</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
                         </NavDropdown>

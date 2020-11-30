@@ -20,7 +20,7 @@ class Slide extends React.Component {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://i.pinimg.com/originals/63/c6/26/63c626d973f83cca57ec2fc2129cdc6d.jpg"
+                        src="https://cdn.statically.io/img/static.zerochan.net/Jump.Force.full.2394428.jpg"
                         alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -30,7 +30,7 @@ class Slide extends React.Component {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images6.alphacoders.com/647/647537.jpg"
+                        src="https://images6.alphacoders.com/636/thumb-1920-636022.jpg"
                         alt="Third slide"
                     />
                     <Carousel.Caption>
