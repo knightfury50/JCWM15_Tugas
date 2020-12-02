@@ -25,16 +25,24 @@
       "email": "yondaime04@gmail.com"
     },
     {
-      "first_name": "michael ",
-      "last_name": "siahaan",
-      "email": "msiahaan22@ymail.com",
-      "id": 5
-    },
-    {
+      "id": 5,
       "first_name": "alfa",
       "last_name": "liesto",
-      "email": "alfa_liesto@rocketmail.com",
-      "id": 6
+      "email": "al@mail.com"
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "username": "michael",
+      "password": "michael",
+      "email": "michael@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "alfa",
+      "password": "alfa",
+      "email": "alfa@yahoo.com"
     }
   ]
 }

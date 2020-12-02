@@ -5,6 +5,7 @@ class To_do_list extends React.Component {
     super(props)
     this.state = {
       activity: ["Makan", "Minum", "Tidur"],
+      selectedID: null
     }
   }
 
@@ -30,7 +31,22 @@ class To_do_list extends React.Component {
     let newArr = [...this.state.activity]
     newArr.splice(index, 1)
     this.setState({ activity: newArr })
-  };
+  }
+
+  editHandle = (index) => {
+    this.setState({selectedID: index})
+  }
+
+  saveHandle = (index) => {
+    let newAct = this.refs.editact.value
+    let arr = [...this.state.activity]
+    arr.splice(index, 1, newAct)
+    this.setState({activity: arr, selectedID: null})
+  }
+
+  cancelHandle = () => {
+    this.setState({selectedID: null})
+  }
 
   renderTHead = () => {
     return (
@@ -46,13 +62,26 @@ class To_do_list extends React.Component {
   renderTBody = () => {
     return (
       <tbody>
-        {
-          this.state.activity.map((item, index) => {
+        {this.state.activity.map((item, index) => {
+          if (this.state.selectedID === index) {
+            return (
+              <tr>
+                <td>
+                  <input type="text" ref="editact" placeholder="input your schedule"/>
+                </td>
+                <td>
+                  <button onClick={() => this.saveHandle(index)}>✔</button>
+                  <button onClick={() => this.cancelHandle(index)}>❌</button>
+                </td>
+              </tr>
+            )
+          }
             return (
               <tr>
                 <td id='list'>{item}</td>
                 <td>
-                  <button onClick={() => this.delHandle(index)} id='button2'>❌</button>
+                  <button onClick={() => this.editHandle(index)} id='button2'>Edit</button>
+                  <button onClick={() => this.delHandle(index)} id='button2'>Delete</button>
                 </td>
               </tr>
             )

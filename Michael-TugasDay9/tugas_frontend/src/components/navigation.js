@@ -2,11 +2,18 @@ import React from 'react'
 import {
     Navbar,
     Nav,
-    NavDropdown
+    NavDropdown,
+    Dropdown
 } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {logout} from '../action'
 
 class Navigation extends React.Component {
+    handlelogout = () => {
+        this.props.logout()
+        localStorage.removeItem('username')
+    }
     render() {
         return (
             <Navbar bg="dark" variant="dark" expand="lg">
@@ -33,9 +40,32 @@ class Navigation extends React.Component {
                             <NavDropdown.Divider />
                         </NavDropdown>
                     </Nav>
+                    <Dropdown style={{marginRight:'40px'}}>
+                        <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                            {this.props.username ? this.props.username : 'Username'}
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            {this.props.username
+                            ?
+                            <Dropdown.Item onClick={this.handlelogout}>Logout</Dropdown.Item>
+                            :
+                            <>
+                            <Dropdown.Item as={Link} to='/login'>Login</Dropdown.Item>
+                            <Dropdown.Item as={Link} to='/register'>Register</Dropdown.Item>
+                            </>
+                            }
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </Navbar.Collapse>
             </Navbar>
         )
     }
 }
-export default Navigation
+
+const mapStateToProps = (state) => {
+    return {
+        username: state.login.username
+    }
+}
+
+export default connect(mapStateToProps, {logout}) (Navigation)
